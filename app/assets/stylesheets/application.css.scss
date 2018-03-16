@@ -10,12 +10,30 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
+
+/* General */
+
+html { height: 100%; }
+body {
+    min-height:100%; 
+    position:relative; 
+    padding-bottom:80px; 
+}
+
+/* Emoji */ 
 
 .em {
   font-size: 0.75em;
   margin-bottom: 2px;
 }
+
+/* Imports */
+
+@import "spectre.min.css";
+@import "spectre-exp.min.css";
+@import "variables";
+@import "navigation";
+@import "footer";
