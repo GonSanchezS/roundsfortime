@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   get 'crossfit-gyms-dublin', to: 'static_pages#dublin'
   get 'test', to: 'static_pages#test'
+  get 'crossfit-glossary', to: 'static_pages#glossary'
 end
