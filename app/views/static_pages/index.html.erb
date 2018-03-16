@@ -3,122 +3,124 @@
     <div class="col-xs-12 col-lg-8 col-mx-auto">
       <h1>Find the best Crossfit gym near you</h1>
       <p>The best crossfit boxes near you, carefully vetted to make sure it fulfills all requirements.</p>
-      <form>
-          <br>
-        <input type="text" name="email">
-        <br>
-        <input type="submit" value="Submit">
-      </form>
-
-      <span>How are these gyms vetted, and why it's so important?</span>
+      <fieldset disabled>
+        <form>
+          <input type="search" attribute="disabled" class="form-input" placeholder="Search is coming soon...">
+        </form>
+      </fieldset>
+      <p><%= link_to standards_path, :class => 'vetted-note' do %>What should you look for in a great box?<% end %> <i class="fas fa-info-circle"></i></p>
     </div>
   </div>
 </div>
 
 <div class="container cities">
+  <div class="columns"> 
+    <div class="column col-11 col-xs-12 col-mx-auto">
 
-<div class="columns"> 
-  <div class="column col-10 col-xs-12 col-mx-auto">
-
-    <div class="columns">
-      <div class="column col-9 col-xs-12">
-        <h3>United States</h3>
-        <div class="columns">
-          <div class="column col-4 col-xs-12">
-            <ul>
-              <li>Portland </li>
-              <li>Pittsburgh</li>
-              <li>Providence</li>
-              <li>Charleston</li>
-              <li>Sioux Falls</li>
-              <li>Memphis</li>
-              <li>Austin</li>
-              <li>Salt Lake City</li>
-              <li>Burlington</li>
-              <li>Virginia Beach</li>
-              <li>Seattle</li>
-              <li>Morgantown</li>
-              <li>Milwaukee</li>
-              <li>Cheyenne</li>
-              <li>Washington DC</li>
-              <li>Houston</li>
-              <li>Dallas</li>
-              <li>Sacramento</li>
-              <li>Queens</li>
-              <li>Denver</li>
-              <li>San Francisco</li>
-            </ul>
-          </div>
-          <div class="column col-4 col-xs-12">
-            <ul>
-              <li>Louisville</li>
-              <li>New Orleans</li>
-              <li>Portland</li>
-              <li>Baltimore</li>
-              <li>Boston</li>
-              <li>Ann Arbor</li>
-              <li>Minneapolis</li>
-              <li>Jackson</li>
-              <li>St Louis</li>
-              <li>Bozeman</li>
-              <li>Omaha</li>
-              <li>Las Vegas</li>
-              <li>Manchester</li>
-              <li>Newark</li>
-              <li>Albuquerque</li>
-              <li>New York City</li>
-              <li>Charlotte</li>
-              <li>Fargo</li>
-              <li>Cleveland</li>
-              <li>Oklahoma</li>
-              <li>Kansas City</li>
-            </ul>
-          </div>
-          <div class="column col-4 col-xs-12">
-            <ul>
-              <li>Huntsville</li>
-              <li>Anchorage</li>
-              <li>Phoenix</li>
-              <li>Little Rock</li>
-              <li>San Diego</li>
-              <li>Colorado Springs</li>
-              <li>Milford</li>
-              <li>Wilmington</li>
-              <li>Orlando</li>
-              <li>Atlanta</li>
-              <li>Oahu</li>
-              <li>Boise</li>
-              <li>Chicago</li>
-              <li>Indianapolis</li>
-              <li>Des Moines</li>
-            </ul>
+      <div class="columns">
+        <div class="column col-9 col-xs-12">
+          <h3>United States</h3>
+          <div class="columns">
+            <div class="column col-3 col-xs-12">
+              <ul>
+                <li>Portland </li>
+                <li>Pittsburgh</li>
+                <li>Providence</li>
+                <li>Charleston</li>
+                <li>Sioux Falls</li>
+                <li>Memphis</li>
+                <li>Austin</li>
+                <li>Salt Lake City</li>
+                <li>Burlington</li>
+                <li>Virginia Beach</li>
+                <li>Seattle</li>
+                <li>Morgantown</li>
+                <li>Milwaukee</li>
+                <li>Cheyenne</li>
+                <li>Houston</li>
+              </ul>
+            </div>
+            <div class="column col-3 col-xs-12">
+              <ul>
+                <li>Dallas</li>
+                <li>Sacramento</li>
+                <li>Queens</li>
+                <li>Denver</li>
+                <li>San Francisco</li>
+                  <li>Albuquerque</li>
+                <li>New York City</li>
+                <li>Charlotte</li>
+                <li>Fargo</li>
+                <li>Cleveland</li>
+                <li>Oklahoma</li>
+                <li>Kansas City</li>
+                <li>Washington DC</li>
+                <li>Indianapolis</li>
+                <li>Des Moines</li>
+              </ul>
+            </div>
+            <div class="column col-3 col-xs-12">
+              <ul>
+                <li>Louisville</li>
+                <li>New Orleans</li>
+                <li>Portland</li>
+                <li>Baltimore</li>
+                <li>Boston</li>
+                <li>Ann Arbor</li>
+                <li>Minneapolis</li>
+                <li>Jackson</li>
+                <li>St Louis</li>
+                <li>Bozeman</li>
+                <li>Omaha</li>
+                <li>Las Vegas</li>
+                <li>Manchester</li>
+                <li>Newark</li>
+                <li>Chicago</li>
+              </ul>
+            </div>
+            <div class="column col-3 col-xs-12">
+              <ul>
+                <li>Huntsville</li>
+                <li>Anchorage</li>
+                <li>Phoenix</li>
+                <li>Little Rock</li>
+                <li>San Diego</li>
+                <li>Colorado Springs</li>
+                <li>Milford</li>
+                <li>Wilmington</li>
+                <li>Orlando</li>
+                <li>Atlanta</li>
+                <li>Oahu</li>
+                <li>Boise</li>
+              </ul>
+            </div>
           </div>
         </div>
+
+        <div class="column col-3 col-xs-12">
+          <h3 class="">Rest of the world</h3>
+          <div class="columns">
+            <div class="column col-12">
+              <ul>
+                <li>London</li>
+                <li>Dublin</li>
+                <li>Paris</li>
+                <li>Barcelona</li>
+                <li>Sydney</li>
+                <li>Perth</li>
+                <li>Melbourne</li>
+                <li>Mumbai</li>
+                <li>Glasgow</li>
+                <li>Amsterdam</li>
+                <li>Cape Town</li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+
       </div>
-
-      <div class="column col-3 col-xs-12">
-        <h3>Rest of the world</h3>
-        <div class="columns">
-          <div class="column col-12">
-            <ul>
-              <li>London</li>
-              <li>Dublin</li>
-              <li>Paris</li>
-              <li>Barcelona</li>
-              <li>Sydney</li>
-              <li>Perth</li>
-              <li>Melbourne</li>
-              <li>Mumbai</li>
-              <li>Glasgow</li>
-              <li>Amsterdam</li>
-              <li>Cape Town</li>
-            </ul>
-          </div>
-        </div>
-      </div> 
 
     </div>
   </div>
-
 </div>
 
