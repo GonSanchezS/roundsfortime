@@ -30,14 +30,11 @@ body {
   margin-bottom: 2px;
 }
 
-.fa-fire {
-  color: #e85600;
-}
-
 /* Imports */
 
-@import "spectre.min.css";
-@import "spectre-exp.min.css";
 @import "variables";
+@import "roundsfortime";
 @import "navigation";
 @import "footer";
+@import "spectre.min.css";
+@import "spectre-exp.min.css";

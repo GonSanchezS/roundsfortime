@@ -19,7 +19,7 @@
 
     <header class="navbar">
       <section class="navbar-section">
-        <%= link_to 'Rounds for Time', root_path, :class => 'navbar-brand mr-2'  %> <i class="fas fa-fire"></i>
+        <%= link_to root_path, :class => 'logo' do %>Rounds for Time <i class="fas fa-fire"></i><% end %>
       </section>
       <section class="navbar-section">
             <a href="#">Submit a Box</a>
@@ -30,8 +30,6 @@
     <main class="content">
           <%= yield %>
     </main>
-
-    <br />
 
     <footer class="footer">
       Made with <i class="em em-blue_heart"></i> and lots of <i class="em em-coffee"></i> in Paris<br/><span class="footer-note"><i>Rounds for Time © 2018</i></span>

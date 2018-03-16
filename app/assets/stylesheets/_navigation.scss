@@ -1,5 +1,23 @@
 header {
   padding: 15px 30px 15px 30px;
   background-color: $dark-color;
-  & a{color: white;}
+  & a{color: white;padding-left: 20px;}
+}
+
+.logo {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.1;
+  padding-right: 8px;
+  
+  &:hover {
+    text-decoration: none;
+    color: white;
+    opacity: .9;
+  }
+  }
+
+.fa-fire {
+  color: #e85600;
 }
