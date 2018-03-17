@@ -1,0 +1,12 @@
+#box-features {
+  border: none;
+
+  &:hover {
+    background-color: white;
+    cursor: default;
+  }
+}
+
+.social {
+  float: right;
+}
