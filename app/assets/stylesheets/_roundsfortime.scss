@@ -1,17 +1,40 @@
+
+
 .hero {
   /* background-image: url(https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb;); */
-  background-color: $dark-color;
+  background-color: white;
   padding: 80px 0 100px 0;
-  color: white;
-
+  color: $black-color;
   h1, p, a {
     text-align: center;
+  }
+
+  h1 {
+    font-size: 2.9em;
+    font-weight: 600;
+  }
+}
+
+.featured {
+  padding: 70px 0 70px 0;
+  background-color: $light-color;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
   }
 }
 
 .cities {
-  background-color: $light-color;
-  padding: 50px 0 50px 0px;
+  background-color: $dark-color;
+  padding: 70px 0 70px 60px;
+  color: white;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+
+  }
 
   h3 {
     text-transform: uppercase;
@@ -32,16 +55,50 @@
 
 }
 
-form {
-  width: 70%;
-  margin: auto;
+.search-box {
+  width: 500px;
+  display: block;
+  margin: 30px auto 10px auto;
+
+
+  input {
+  width: 75%;
+  height: 45px;
 }
 
+button {
+  height: 45px;
+  padding: 0 20px 0 20px;
+  margin-bottom: 3px;
+  width: 23%;
+}
+
+}
+
+button.btn.btn-primary.input-group-btn {
+  height: 45px;
+  padding: 0 20px 0 20px;
+  background-color: $dark-color;
+  border: $dark-color;
+}
+
+input.form-input {
+  height: 45px;
+}
+
+
+
 .vetted-note {
+  color: $black-color;
   font-size: 0.8em;
   opacity: .75;
   border-bottom: 1px dotted;
-  color: white;
+
+  &:hover {
+    text-decoration:none;
+    border-bottom: 1px solid;
+    color: $black-color;
+  }
 }
 
 .fa-info-circle {

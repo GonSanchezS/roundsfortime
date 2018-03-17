@@ -1,11 +1,11 @@
 .footer {
-  background-color: $dark-color;
-  padding: 20px;
-  color: white;
+  background-color: white;
+  padding: 20px 40px 20px 40px;
   font-size: 0.9em;
   position: absolute; 
   left: 0 ; right: 0; bottom: 0; 
   height:80px;
+  text-align: center;
 }
 
 .footer-note {
