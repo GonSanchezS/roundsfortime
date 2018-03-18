@@ -13,23 +13,6 @@
  *= require_self
  */
 
-
-/* General */
-
-html { height: 100%; }
-body {
-    min-height:100%; 
-    position:relative; 
-    padding-bottom:80px; 
-}
-
-/* Emoji & Others */ 
-
-.em {
-  font-size: 0.75em;
-  margin-bottom: 2px;
-}
-
 /* Imports */
 
 @import "variables";

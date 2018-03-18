@@ -2,8 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-
-    <title>Rounds For Time: Find The Best Crossfit Box Near You</title>
+    <title>Rounds For Time: Find The Best Crossfit Gym Near You</title>
     <%= csrf_meta_tags %>
     <meta name="description" content="A carefully curated list of the best Crossfit box in over 50 cities across the United States and around the world.">
     <meta name="viewport" content="width=devide-width, initial-scale=1">
@@ -16,29 +15,25 @@
   </head>
 
   <body>
-
     <header class="navbar">
       <section class="navbar-section">
-        <%= link_to root_path, :class => 'logo' do %>Rounds for Time <i class="fas fa-fire"></i><% end %>
+        <%= link_to root_path, :class => 'logo' do %><i class="fas fa-fire"></i> Rounds for Time<% end %>
       </section>
       <section class="navbar-section">
-            <a href="#">Submit a Box</a>
-            <%= link_to 'Crossfit Glossary', crossfit_glossary_path %>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#">Submit a Box</a>
+        <%= link_to 'Crossfit Glossary', crossfit_glossary_path %>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
       </section>
     </header>
 
     <main class="content">
-          <%= yield %>
+        <%= yield %>
     </main>
-
+    
     <footer class="footer">
-    Made with <i class="em em-blue_heart"></i> and lots of <i class="em em-coffee"></i>  in Paris<br/><span class="footer-note"><i>© 2018 Rounds for Time</i></span>
-
-
+      Built with lots of <i class="em em-coffee"></i><br/><span class="footer-note"><i>© 2018 Rounds for Time</i></span>
     </footer>
-
   </body>
 </html>

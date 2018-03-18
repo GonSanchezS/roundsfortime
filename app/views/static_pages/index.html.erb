@@ -2,138 +2,107 @@
 
 <div class="container hero">
   <div class="columns">
+
     <div class="column col-xs-12 col-5 col-ml-auto">
-      <br />
-      <br />
       <h1>Find the best Crossfit gym near you</h1>
-      <p>The best crossfit boxes near you, carefully vetted to make sure it fulfills all requirements.</p>
-
-<button class="btn btn-primary" id="main-button">Find city</button>
-
-<br />
-
-<!--
-      <form class="search-box form-horizontal">
-            <input type="text" placeholder="Find boxes near...">
-            <button class="btn btn-primary">Search</button>
-      </form>
-
-    -->
+      <p>Discover over 1,000 carefully curated Crossfit gyms in the United States and around the world. Because you deserve the best.</p>
+      <button class="btn btn-primary main-button">Select a city</button>
       <p><%= link_to standards_path, :class => 'vetted-note' do %>What should you look for in a great box?<% end %> <i class="fas fa-info-circle"></i></p>
     </div>
 
     <div class="column col-xs-12 col-5 col-mr-auto">
-
-<div class="columns">
-
-    <div class="column col-9 col-mx-auto">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://crossfitireland.ie/wp-content/uploads/2018/02/7ab0c4e2-dfb3-41a2-a10a-10f96f8997e1-1080x675.jpg" class="img-responsive">
-        </div>
-        <div class="card-header">
-          <h3 class="card-title"><a href="http://www.crossfitireland.ie/" target="_noblank" rel="external nofollow">CrossFit Ireland</a></h3>
-          <div class="card-subtitle text-gray">T27 Rowan Avenue Stillorgan Industrial Park</div>
-        </div>
-        <div class="card-body">
-          Empower every person and every organization on the planet to achieve more.
-        </div>
-        <div class="card-footer">
-          <button class="btn" id="box-features"><i class="em em-man-lifting-weights"></i> L2</button>
-          <button class="btn" id="box-features"><i class="em em-money_with_wings"></i> 180 EUR</button>
-          <button class="btn" id="box-features"><i class="em em-clock3"></i> 2012</button>
-          <button class="btn social" id="box-features"><i class="fab fa-facebook-f"></i></button>
-          <button class="btn social" id="box-features"><i class="fab fa-instagram"></i></button>
-        </div>
+          <div class="card featured-card">
+            <div class="card-image">
+              <img src="http://crossfitireland.ie/wp-content/uploads/2018/02/7ab0c4e2-dfb3-41a2-a10a-10f96f8997e1-1080x675.jpg" class="img-responsive">
+            </div>
+            <div class="card-header">
+              <h3 class="card-title"><a href="http://www.crossfitireland.ie/" target="_noblank" rel="external nofollow">CrossFit Ireland</a></h3>
+              <div class="card-subtitle text-gray">T27 Rowan Avenue Stillorgan Industrial Park</div>
+            </div>
+            <div class="card-body">
+              Empower every person and every organization on the planet to achieve more.
+            </div>
+            <div class="card-footer">
+              <button class="btn" id="box-features"><i class="em em-man-lifting-weights"></i> L2</button>
+              <button class="btn" id="box-features"><i class="em em-money_with_wings"></i> 180 EUR</button>
+              <button class="btn" id="box-features"><i class="em em-clock3"></i> 2012</button>
+              <button class="btn social" id="box-features"><i class="fab fa-facebook-f"></i></button>
+              <button class="btn social" id="box-features"><i class="fab fa-instagram"></i></button>
+            </div>
       </div>
     </div>
 
-
-
-    </div>
-
   </div>
-
 </div>
-
-</div>
-
-<!-- Value Prop - HERE GOES A BIG EXPLANATION!!!!!!  -->
-
 
 
 <!-- Value Prop -->
 
-<div class="container featured">
+<div class="container section light">
   <div class="columns">
+    <div class="column col-xs-12 col-7 col-mx-auto">
 
-    <div class="column col-xs-12 col-lg-8 col-mx-auto">
       <h2>Why we are better</h2>
-      <p>Picking your gym isn't a decision you should treat ligthly. Yes, the official Crossfit site has all official affiliates in there. Or you can Google it. But I think we bring something else to the table. Here it is.</p>
-    </div>
 
-  </div>
+      <p>Picking a Crossfit box isn't a decision you should treat ligthly. We look at the most common quality indicators so you don't have to.</p>
 
-  <div class="columns">
-
-    <div class="column col-4 col-md-12 col-xs-12 col-ml-auto">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://crossfitireland.ie/wp-content/uploads/2018/02/7ab0c4e2-dfb3-41a2-a10a-10f96f8997e1-1080x675.jpg" class="img-responsive">
+      <div class="columns">
+        <div class="column col-6">
+          <a class="benefit-box">
+            <img src="#">
+            <i class="em em-man-lifting-weights"></i> <h4>Coaching Certifications</h4>
+            <span>Truly excited and engaged coaches tend to be seeking out education opportunities.</span>
+          </a>
         </div>
-        <div class="card-header">
-          <h3 class="card-title"><a href="http://www.crossfitireland.ie/" target="_noblank" rel="external nofollow">CrossFit Ireland</a></h3>
-          <div class="card-subtitle text-gray">T27 Rowan Avenue Stillorgan Industrial Park</div>
-        </div>
-        <div class="card-body">
-          Empower every person and every organization on the planet to achieve more.
-        </div>
-        <div class="card-footer">
-          <button class="btn" id="box-features"><i class="em em-man-lifting-weights"></i> L2</button>
-          <button class="btn" id="box-features"><i class="em em-money_with_wings"></i> 180 EUR</button>
-          <button class="btn" id="box-features"><i class="em em-clock3"></i> 2012</button>
-          <button class="btn social" id="box-features"><i class="fab fa-facebook-f"></i></button>
-          <button class="btn social" id="box-features"><i class="fab fa-instagram"></i></button>
+        <div class="column col-6">
+          <a class="benefit-box">
+            <img src="#">
+            <i class="em em-clock3"></i> <h4>Real photos</h4>
+            <span>Everyone can make a gym look nice. Not everyone can fake a great class.</span>
+          </a>
         </div>
       </div>
-    </div>
 
-    <div class="column col-4 col-md-12 col-xs-12 col-mr-auto">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://crossfitireland.ie/wp-content/uploads/2018/02/7ab0c4e2-dfb3-41a2-a10a-10f96f8997e1-1080x675.jpg" class="img-responsive">
+      <div class="columns">
+        <div class="column col-6">
+          <a class="benefit-box">
+            <img src="#">
+            <i class="em em-clock3"></i> <h4>When was the box founded?</h4>
+            <span>If a box has been around for years, then they probably know what they are doing.</span>
+          </a>
         </div>
-        <div class="card-header">
-          <h3 class="card-title"><a href="http://www.crossfitireland.ie/" target="_noblank" rel="external nofollow">CrossFit Ireland</a></h3>
-          <div class="card-subtitle text-gray">T27 Rowan Avenue Stillorgan Industrial Park</div>
-        </div>
-        <div class="card-body">
-          Empower every person and every organization on the planet to achieve more.
-        </div>
-        <div class="card-footer">
-          <button class="btn" id="box-features"><i class="em em-man-lifting-weights"></i> L2</button>
-          <button class="btn" id="box-features"><i class="em em-money_with_wings"></i> 180 EUR</button>
-          <button class="btn" id="box-features"><i class="em em-clock3"></i> 2012</button>
-          <button class="btn social" id="box-features"><i class="fab fa-facebook-f"></i></button>
-          <button class="btn social" id="box-features"><i class="fab fa-instagram"></i></button>
+        <div class="column col-6">
+          <a class="benefit-box">
+            <img src="#">
+            <i class="em em-phone"></i> <h4>Does it have a social media presence?</h4>
+            <span>A gym that takes pride in what they are doing loves to showcase it.</span>
+          </a>
         </div>
       </div>
-    </div>
 
+<br />
+
+      <i class="em em-money_with_wings"></i><h4 style="text-align:center;">Plus monthly pricing, drop-in info and more...</h4>
+      <p></p>
+
+    </div>
   </div>
 </div>
 
 <!-- All cities -->
 
-<div class="container cities">
+<div class="container section dark">
   <div class="columns"> 
-    <div class="column col-11 col-xs-12 col-mx-auto">
+    <div class="column col-10 col-xs-12 col-mx-auto">
 
       <h2>Available in 50+ cities</h2>
+      <p>More coming every week. Looking to submit your box?</p>
+
+      <br />
 
       <div class="columns">
         <div class="column col-9 col-xs-12">
-          <h3>United States</h3>
+          <h4>United States</h4>
           <div class="columns">
             <div class="column col-3 col-xs-12">
               <ul>
@@ -212,7 +181,7 @@
         </div>
 
         <div class="column col-3 col-xs-12">
-          <h3 class="">Rest of the world</h3>
+          <h4 class="">Rest of the world</h4>
           <div class="columns">
             <div class="column col-12">
               <ul>
