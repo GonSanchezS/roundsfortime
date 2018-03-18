@@ -1,5 +1,7 @@
 #box-features {
   border: none;
+  color: $dark-color;
+  font-weight: 500;
 
   &:hover {
     background-color: white;
@@ -7,6 +9,16 @@
   }
 }
 
-.social {
+#box-social {
+  border: none;
+  color: $dark-color;
   float: right;
+  font-size: 1.2em !important;
+   &:hover {
+    background-color: white;
+  }
+}
+
+.em-calendar {
+  margin-bottom: 4px;
 }

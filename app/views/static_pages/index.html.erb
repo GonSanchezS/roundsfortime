@@ -6,8 +6,8 @@
     <div class="column col-xs-12 col-5 col-ml-auto">
       <h1>Find the best Crossfit gym near you</h1>
       <p>Discover over 1,000 carefully curated Crossfit gyms in the United States and around the world. Because you deserve the best.</p>
-      <button class="btn btn-primary main-button">Select a city</button>
-      <p><%= link_to standards_path, :class => 'vetted-note' do %>What should you look for in a great box?<% end %> <i class="fas fa-info-circle"></i></p>
+      <a href="#cities"><button class="btn btn-primary main-button">Select a city</button></a>
+      <p><%= link_to standards_path, :class => 'vetted-note' do %>or learn what to look for in good gym<% end %> <i class="fas fa-info-circle"></i></p>
     </div>
 
     <div class="column col-xs-12 col-5 col-mr-auto">
@@ -20,14 +20,15 @@
               <div class="card-subtitle text-gray">T27 Rowan Avenue Stillorgan Industrial Park</div>
             </div>
             <div class="card-body">
-              Empower every person and every organization on the planet to achieve more.
+              Fun box with multiple coaching and nutrition options, located in an industrial park.
             </div>
             <div class="card-footer">
               <button class="btn" id="box-features"><i class="em em-man-lifting-weights"></i> L2</button>
-              <button class="btn" id="box-features"><i class="em em-money_with_wings"></i> 180 EUR</button>
-              <button class="btn" id="box-features"><i class="em em-clock3"></i> 2012</button>
-              <button class="btn social" id="box-features"><i class="fab fa-facebook-f"></i></button>
-              <button class="btn social" id="box-features"><i class="fab fa-instagram"></i></button>
+              <button class="btn" id="box-features"><i class="em em-iphone"></i> <i class="fas fa-check"></i></button>
+              <button class="btn" id="box-features"><i class="em em-calendar"></i> 2012</button>
+              <button class="btn" id="box-features"><i class="em em-money_with_wings"></i> €180</button>
+              <a class="btn" id="box-social"><i class="fab fa-facebook-f social"></i></a>
+              <a class="btn" id="box-social"><i class="fab fa-instagram"></i></a>
             </div>
       </div>
     </div>
@@ -134,7 +135,7 @@
 
 <!-- All cities -->
 
-<div class="container section dark">
+<div class="container section dark" id="cities">
   <div class="columns"> 
     <div class="column col-10 col-xs-12 col-mx-auto">
 

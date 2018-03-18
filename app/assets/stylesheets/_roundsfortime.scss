@@ -64,14 +64,20 @@ a:hover {
     width: 80%;
     float: right;
   }
+
   .main-button {
     height: 55px;
     margin: 20px 0 15px 0;
     background-color: $highlight-color;
     padding: 0 20px 0 20px;
     border: none;
+    
+  a {
+    color: white;
+  }
     &:hover{background-color: $dark-color;}
   }
+
 }
 
 .vetted-note {
