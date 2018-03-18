@@ -92,7 +92,13 @@ a:hover {
 .benefit-box {
   padding: 20px;
   display: inline-block;
+
+  .em {
+    font-size: 1.2em;
+    margin-right: 15px;
+  }
 }
+
 
 /* Sections */
 
