@@ -71,7 +71,7 @@ a:hover {
     background-color: $highlight-color;
     padding: 0 20px 0 20px;
     border: none;
-    
+
   a {
     color: white;
   }
@@ -124,4 +124,24 @@ a:hover {
   background-color: $dark-color;
   h2,h4,p,li {color:white;}
 }
+
+.box-extras {
+  padding: 20px;
+  color: white;
+
+  span {
+    opacity: .75;
+  }
+}
+
+
+  .btn-empty {
+    background-color: $dark-color;
+    color: white;
+    border-color: white;
+    &:hover {
+      color: $dark-color;
+      border: white;
+    }
+  }
 
