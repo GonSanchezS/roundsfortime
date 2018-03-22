@@ -1,45 +1,6 @@
-<!-- Hero -->
-
-<div class="container hero">
-  <div class="columns">
-
-    <div class="column col-xs-12 col-5 col-ml-auto">
-      <h1>Find the best Crossfit gym near you</h1>
-      <p>Discover over 1,000 carefully curated Crossfit gyms in the United States and around the world. Because you deserve the best.</p>
-      <a href="#cities"><button class="btn btn-primary main-button">Select a city</button></a>
-      <p><i class="fas fa-info-circle"></i>  <%= link_to standards_path, :class => 'vetted-note' do %>Learn what makes a good gym<% end %></p>
-    </div>
-
-    <div class="column col-xs-12 col-5 col-mr-auto">
-          <div class="card featured-card">
-            <div class="card-image">
-              <img src="http://crossfitireland.ie/wp-content/uploads/2018/02/7ab0c4e2-dfb3-41a2-a10a-10f96f8997e1-1080x675.jpg" class="img-responsive">
-            </div>
-            <div class="card-header">
-              <h3 class="card-title"><a href="http://www.crossfitireland.ie/" target="_noblank" rel="external nofollow">CrossFit Ireland</a></h3>
-              <div class="card-subtitle text-gray">T27 Rowan Avenue Stillorgan Industrial Park</div>
-            </div>
-            <div class="card-body">
-              Fun box with multiple coaching and nutrition options, located in an industrial park.
-            </div>
-            <div class="card-footer">
-              <button class="btn" id="box-features"><i class="em em-man-lifting-weights"></i> L2</button>
-              <button class="btn" id="box-features"><i class="em em-iphone"></i> <i class="fas fa-check"></i></button>
-              <button class="btn" id="box-features"><i class="em em-calendar"></i> 2012</button>
-              <button class="btn" id="box-features"><i class="em em-money_with_wings"></i> €180</button>
-              <a class="btn" id="box-social"><i class="fab fa-facebook-f social"></i></a>
-              <a class="btn" id="box-social"><i class="fab fa-instagram"></i></a>
-            </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
 <!-- Value Prop -->
 
-<div class="container section light">
+<div class="container section light" id="better">
   <div class="columns">
     <div class="column col-xs-12 col-8 col-mx-auto">
 
@@ -132,5 +93,3 @@
     </div>
   </div>
 </div>
-
-<%= render 'cities' %>
