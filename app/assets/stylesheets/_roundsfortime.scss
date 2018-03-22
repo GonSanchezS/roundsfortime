@@ -83,10 +83,10 @@ a:hover {
 .vetted-note {
   font-size: 0.8em;
   opacity: .75;
-  border-bottom: 1px dotted;
+  border-bottom: 2px dotted;
 
   &:hover {
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
   }
 }
 
