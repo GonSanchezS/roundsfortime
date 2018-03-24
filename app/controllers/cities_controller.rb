@@ -5,5 +5,9 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    @boxes = Box.all
   end
+
+  private
+
 end
