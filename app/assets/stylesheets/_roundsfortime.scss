@@ -96,16 +96,6 @@ a:hover {
   opacity: .75;
 }
 
-.benefit-box {
-  padding: 20px;
-  display: inline-block;
-
-  .em {
-    font-size: 1.2em;
-    margin-right: 15px;
-  }
-}
-
 
 /* Sections */
 
@@ -117,10 +107,6 @@ a:hover {
   }
 }
 
-.boxes {
-  padding: 90px 8% 50px 8%;
-}
-
 .light {
   background-color: $light-color;
 }
@@ -130,32 +116,36 @@ a:hover {
   h2,h4,p,li {color:white;}
 }
 
-.box-extras {
-  padding: 20px;
-  color: white;
-
-  span {
-    opacity: .75;
-  }
+.boxes {
+  padding: 90px 8% 50px 8%;
 }
 
-.contentt {
 
-  padding: 70px 0 70px 0;
-
+.text {
   p {
     text-align: left;
   }
 }
 
 
-  .btn-empty {
+
+.benefit-box {
+  padding: 20px;
+  display: inline-block;
+
+  .em {
+    font-size: 1.2em;
+    margin-right: 15px;
+  }
+}
+
+.btn-empty {
     background-color: $dark-color;
     color: white;
     border-color: white;
     &:hover {
       color: $dark-color;
       border: white;
-    }
   }
+}
 
