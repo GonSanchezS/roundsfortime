@@ -1,8 +1,14 @@
+<% content_for :page_title do
+  @city.name
+end %>
+
+<% content_for :meta_description do
+  @city.name
+end %>
+
 <div class="container section light">
   <div class="columns">
     <div class="column col-xs-12 col-8 col-mx-auto">
-
-      
 
 <h1 style="text-align: center;">The best Crossfit gyms in <%= @city.name %></h1>
 <p>There are <strong><%= @boxes.count %></strong> affiliated Crossfit gyms in <%= @city.name %> that meet our standards, and the average price is 190 EUR. You can find a list of the <strong>best Crossfit gyms in <%= @city.name %></strong> below, in no particular order.</p>

@@ -2,9 +2,20 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Rounds For Time: Find The Best Crossfit Gym Near You</title>
+    <title>
+      <%- if content_for? :page_title -%>
+        Best Crossfit Gyms in <%= yield :page_title %> – Rounds for Time
+      <%- else -%>
+        Rounds For Time: Find The Best Crossfit Gym Near You
+      <%- end -%>
+    </title>
+
+    <%- if content_for? :meta_description -%>
+        <meta name="description" content="Best best <%= yield :meta_description %>" />
+        <%- else -%>
+      <meta name="description" content="A carefully curated list of the best Crossfit box in over 50 cities across the United States and around the world." />
+    <% end %>
     <%= csrf_meta_tags %>
-    <meta name="description" content="A carefully curated list of the best Crossfit box in over 50 cities across the United States and around the world.">
     <meta name="viewport" content="width=devide-width, initial-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
