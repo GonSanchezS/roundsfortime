@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180324130616) do
+ActiveRecord::Schema.define(version: 20180326101633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20180324130616) do
     t.string   "url"
     t.text     "description"
     t.string   "address"
-    t.string   "city"
     t.integer  "zip"
     t.string   "country"
     t.string   "facebook"
@@ -33,6 +32,8 @@ ActiveRecord::Schema.define(version: 20180324130616) do
     t.integer  "opening"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "city_id"
+    t.index ["city_id"], name: "index_boxes_on_city_id", using: :btree
   end
 
   create_table "cities", force: :cascade do |t|
@@ -42,4 +43,5 @@ ActiveRecord::Schema.define(version: 20180324130616) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "boxes", "cities"
 end
