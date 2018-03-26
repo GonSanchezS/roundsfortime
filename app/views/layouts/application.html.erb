@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>
-      <%- if content_for? :page_title -%>
-        Best Crossfit Gyms in <%= yield :page_title %> – Rounds for Time
-      <%- else -%>
+      <% if content_for? :page_title %>
+        <%= yield :page_title_count %> Best Crossfit Gyms in <%= yield :page_title %>
+      <% else %>
         Rounds For Time: Find The Best Crossfit Gym Near You
-      <%- end -%>
+      <% end %>
     </title>
 
-    <%- if content_for? :meta_description -%>
-        <meta name="description" content="Best best <%= yield :meta_description %>" />
-        <%- else -%>
+    <% if content_for? :meta_description %>
+        <meta name="description" content="There are <%= yield :page_title_count %> Crossfit gyms in <%= yield :meta_description %> that meet our standards. Check them out!" />
+        <% else %>
       <meta name="description" content="A carefully curated list of the best Crossfit box in over 50 cities across the United States and around the world." />
     <% end %>
     <%= csrf_meta_tags %>
