@@ -32,7 +32,8 @@ end %>
 <div class="column col-xs-12 col-5 col-mx-auto card-column">
       <div class="card featured-card">
             <div class="card-image">
-              <%= image_tag("crossfit-dublin.jpg", :alt => "Crossfit Ireland in Ireland", :class=> "img-responsive") %>
+              <%= image_tag(box.name, alt: box.name, class: "img-responsive") %>
+  
             </div>
             <div class="card-header">
               <h3 class="card-title"><a href="http://www.crossfitireland.ie/" target="_noblank" rel="external nofollow"><%= box.name %></a></h3>
