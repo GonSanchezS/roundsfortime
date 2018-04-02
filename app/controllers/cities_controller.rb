@@ -8,4 +8,5 @@ class CitiesController < ApplicationController
     @boxes = @city.boxes
     @boxes_count = @boxes.count.to_s
   end
+
 end
