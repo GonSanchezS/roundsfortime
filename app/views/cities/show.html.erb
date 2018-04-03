@@ -16,10 +16,10 @@ end %>
     <div class="column col-xs-12 col-8 col-mx-auto">
 
 <h1 style="text-align: center;">The best Crossfit gyms in <%= @city.name %></h1>
-<p>There are <strong><%= @boxes.count %></strong> affiliated Crossfit gyms in <%= @city.name %> that meet our standards, and the average price is <%= @city.currency %><%= @boxes.average(:price).to_i %> per month for an Unlimited Membership with No Contract. You can find a list of the <strong>best Crossfit gyms in <%= @city.name %></strong> below, in no particular order.</p>
+  <p>There are <strong><%= @boxes.count %></strong> affiliated Crossfit gyms in <%= @city.name %> that meet our high standards. The average price is <%= @city.currency %><%= @boxes.average(:price).to_i %> per month for an Unlimited Membership. You can find a list of the <strong>best Crossfit gyms in <%= @city.name %></strong> below, in no particular order.</p>
 
-<!--
-<p><a href="#better" class="vetted-note">Why are we better?</a> <i class="fas fa-arrow-down"></i></p>-->
+
+<p><a href="#better" class="vetted-note">Why are we better?</a> <i class="fas fa-arrow-down" style="font-size: 10px;"></i></p>
 
     </div>
   </div>
@@ -37,23 +37,23 @@ end %>
   
             </div>
             <div class="card-header">
-              <h3 class="card-title"><a href="http://www.crossfitireland.ie/" target="_noblank" rel="external nofollow"><%= box.name %></a></h3>
+              <h3 class="card-title"><a href="<%= box.url %>" target="_noblank" rel="external nofollow"><%= box.name %></a></h3>
               <div class="card-subtitle text-gray"><%= box.address %>, <%= @city.name %></div>
             </div>
             <div class="card-body">
-              <%= box.description %>
+              <%= box.description %><% if box.dropin? %> Drop-ins accepted.<% end %>
             </div>
             <div class="card-footer">
-              <% if box.certification != nil %><button class="btn" id="box-features"><i class="em em-man-lifting-weights"></i> <%= box.certification %></button><% end %>
-              <button class="btn" id="box-features"><i class="em em-iphone"></i>     
+              <% if box.certification.empty? %><% else %><button class="btn tooltip tooltip-bottom" data-tooltip="Highest coach certification" id="box-features"><i class="em em-man-lifting-weights"></i> <%= box.certification %></button><% end %>
+              <button class="btn tooltip tooltip-bottom" data-tooltip="Active in social media?"  id="box-features"><i class="em em-iphone"></i>     
                 <% if box.is_social? %> 
                   <i class="fas fa-check"></i>
                   <% else %> 
                   <i class="fas fa-times"></i>
                 <% end %>
               </button>
-              <% if box.opening != nil %><button class="btn" id="box-features"><i class="em em-calendar"></i><%= box.opening %></button><% end %>
-              <% if box.currency != nil %><button class="btn" id="box-features"><i class="em em-money_with_wings"></i> <%= box.currency %><%= box.price %></button><% end %>
+              <% if box.opening != nil %><button class="btn tooltip tooltip-bottom" data-tooltip="Opening year" id="box-features"><i class="em em-calendar" style="margin-right: 4px;"></i><%= box.opening %></button><% end %>
+              <% if box.price != nil %><button class="btn tooltip tooltip-bottom" data-tooltip="Monthly membership" " id="box-features"><i class="em em-money_with_wings"></i> <%= box.currency %><%= box.price %></button><% end %>
               <% if box.facebook != nil %><a class="btn" id="box-social" href="<%= box.facebook %>"><i class="fab fa-facebook-f social"></i></a><% end %>
               <% if box.instagram != nil %><a class="btn" id="box-social" href="<%= box.instagram %>"><i class="fab fa-instagram"></i></a><% end %>
             </div>
