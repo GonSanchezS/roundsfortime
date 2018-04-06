@@ -2,6 +2,16 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116872227-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116872227-1');
+    </script>
+
     <title>
       <% if content_for? :page_title %>
         <%= yield :page_title_count %> Best Crossfit Gyms in <%= yield :page_title %>
@@ -45,3 +55,4 @@
     </footer>
   </body>
 </html>
+
