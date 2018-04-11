@@ -7,7 +7,24 @@
 
       <br />
 
+
+
       <div class="columns city-columns">
+
+
+        <div class="column col-3 col-xs-12">
+          <h4 class=""><i class="em em-earth_asia"></i>   Rest of the world</h4>
+          <div class="columns">
+            <div class="column col-12">
+              <ul>
+                <% @cities.each do |city|  %>
+                  <li><%= link_to city.name, city_path(city) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div> 
+
         <div class="column col-9 col-xs-12">
           <h4><i class="em em-us"></i>  United States</h4>
           <div class="columns">
@@ -86,27 +103,6 @@
             </div>
           </div>
         </div>
-
-        <div class="column col-3 col-xs-12">
-          <h4 class=""><i class="em em-earth_asia"></i>   Rest of the world</h4>
-          <div class="columns">
-            <div class="column col-12">
-              <ul>
-                <li>London</li>
-                <li>Dublin</li>
-                <li>Paris</li>
-                <li>Barcelona</li>
-                <li>Sydney</li>
-                <li>Perth</li>
-                <li>Melbourne</li>
-                <li>Mumbai</li>
-                <li>Glasgow</li>
-                <li>Amsterdam</li>
-                <li>Cape Town</li>
-              </ul>
-            </div>
-          </div>
-        </div> 
 
       </div>
 
