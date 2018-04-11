@@ -18,7 +18,9 @@
             <div class="column col-12">
               <ul>
                 <% @cities.each do |city|  %>
-                  <li><%= link_to city.name, city_path(city) %></li>
+                <% if city.country != "France" %>
+                    <li><%= link_to city.name, city_path(city) %>, <%= city.country %> </li>
+                <%end%>    
                 <% end %>
               </ul>
             </div>
