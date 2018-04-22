@@ -7,8 +7,6 @@
 
       <br />
 
-
-
       <div class="columns city-columns">
 
 
@@ -18,8 +16,8 @@
             <div class="column col-12">
               <ul>
                 <% @cities.each do |city|  %>
-                <% if city.country != "France" %>
-                    <li><%= link_to city.name, city_path(city) %>, <%= city.country %> </li>
+                <% if city.country != "United States" %>
+                    <li><%= link_to city.name, city_path(city) %></li>
                 <%end%>    
                 <% end %>
               </ul>
@@ -28,9 +26,9 @@
         </div> 
 
         <div class="column col-9 col-xs-12">
-          <h4><i class="em em-us"></i>  United States</h4>
+          <h4 class="faded"><i class="em em-us"></i>  United States <span class="coming-soon">Coming soon!</span></h4>
           <div class="columns">
-            <div class="column col-3 col-xs-12">
+            <div class="column col-3 col-xs-12 faded">
               <ul>
                 <li>Portland </li>
                 <li>Pittsburgh</li>
@@ -49,7 +47,7 @@
                 <li>Houston</li>
               </ul>
             </div>
-            <div class="column col-3 col-xs-12">
+            <div class="column col-3 col-xs-12 faded">
               <ul>
                 <li>Dallas</li>
                 <li>Sacramento</li>
@@ -68,7 +66,7 @@
                 <li>Des Moines</li>
               </ul>
             </div>
-            <div class="column col-3 col-xs-12">
+            <div class="column col-3 col-xs-12 faded">
               <ul>
                 <li>Louisville</li>
                 <li>New Orleans</li>
@@ -87,7 +85,7 @@
                 <li>Chicago</li>
               </ul>
             </div>
-            <div class="column col-3 col-xs-12">
+            <div class="column col-3 col-xs-12 faded">
               <ul>
                 <li>Huntsville</li>
                 <li>Anchorage</li>
