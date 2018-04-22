@@ -4,8 +4,36 @@
 
       <h2>Available in <%= @cities.count %> cities</h2>
       <p>If you can't find your city, don't throw a small kettlebell at us. We are working hard in-between WODs<br /> to increase our coverage.</p>
+    </div>
+  </div>
 
-      <br />
+
+      <div class="container section boxes">
+    <div class="columns">
+
+<% @cities.each do |city|  %>
+
+<div class="column col-xs-12 col-4 col-mx-auto card-column">
+      <div class="card featured-card" id="city-card">
+            <div class="card-image">
+              <%= image_tag(city.name, alt: city.name, class: "img-responsive") %>
+            </div>
+            <div class="card-header">
+              <h4 class="card-title"><%= link_to city.name, city_path(city) %></h4>
+              <div class="card-subtitle text-gray"><%= city.country %></div>
+            </div>
+      </div>
+    </div>
+<% end %>
+
+<div class="column col-xs-12 col-4 col-mx-auto card-column">
+</div>
+  </div>
+</div>
+
+
+
+      <!--
 
       <div class="columns city-columns">
 
@@ -108,4 +136,4 @@
 
     </div>
   </div>
-</div>
+</div>-->

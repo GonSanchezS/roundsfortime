@@ -118,6 +118,10 @@ a:hover {
   a:hover {
     font-weight: 700;
   }
+
+  .boxes {
+    padding-top: 40px;
+  }
 }
 
 .boxes {
@@ -164,5 +168,17 @@ a:hover {
   opacity: .5;
 }
 
+#city-card {
+  border:none;
+  margin: 0px 10px 0px 10px;
+  
+  a {
+    color: $dark-color;
+  }
+
+  .card-subtitle {
+    font-size: 0.9em;
+  }
+}
 
 
