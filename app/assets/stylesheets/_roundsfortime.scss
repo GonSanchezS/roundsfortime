@@ -132,11 +132,38 @@ a:hover {
 
 
 .text {
-  p {
+  h2, h3, p {
     text-align: left;
   }
+
+  h3 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+
 }
 
+
+.wod-box {
+  background: #f8f9fa;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+
+.index-box {
+  margin-bottom: 30px;
+  padding: 30px 25px 40px 35px;
+  margin-left: 20px;
+  border-radius: 3px;
+
+  h4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
 
 
 .benefit-box {
