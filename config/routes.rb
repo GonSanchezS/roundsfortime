@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   resources :boxes, only: [:index, :show]
   resources :cities, only: [:index, :show]
-  get 'crossfit-gyms-dublin', to: 'static_pages#dublin'
   get 'standards', to: 'static_pages#standards'
-  get 'test', to: 'static_pages#test'
   get 'crossfit-glossary', to: 'static_pages#glossary'
 end
