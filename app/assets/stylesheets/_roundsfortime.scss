@@ -109,6 +109,35 @@ a:hover {
 
 .light {
   background-color: $light-color;
+  .wod-box {
+    background-color: #fff;
+
+
+
+  ul {
+    margin-bottom: 0px;
+    list-style-type: none;
+
+  li {
+    margin-top:0.2rem;
+    font-size: 0.9em;
+    color: #414857;
+  }
+}
+
+
+  }
+
+  ul {
+    margin-bottom: 20px;
+    list-style-type: circle;
+
+  li {
+    margin-top:0.2rem;
+    font-size: 1em;
+    color: #414857;
+  }
+}
 }
 
 .dark {
@@ -150,6 +179,12 @@ a:hover {
   margin-top: 10px;
   padding: 20px;
   border-radius: 3px;
+
+  h5 {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 }
 
 
