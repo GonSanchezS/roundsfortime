@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'sitemap_generator'
+gem 'fog-aws'
+gem 'figaro'
 
 gem 'friendly_id', '~> 5.1.0'
 
