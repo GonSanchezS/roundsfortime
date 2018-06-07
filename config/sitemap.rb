@@ -34,7 +34,6 @@ SitemapGenerator::Sitemap.create do
 end
 
 
-
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
   fogprovider: 'AWS',
   awsaccesskeyid: ENV['AWSACCESSKEYID'],
@@ -42,11 +41,12 @@ SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
   fogdirectory: ENV['S3BUCKET'],
   fogregion: ENV['AWS_REGION'])
 
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider: 'AWS',
+                                                                    aws_access_key_id: ENV['AWSACCESSKEYID'],
+                                                                    aws_secret_access_key: ENV['AWSSECRETACCESSKEY'],
+                                                                    fog_directory: ENV['S3BUCKET'],
+                                                                    fog_region: ENV['AWS_REGION'])
 
-
-SitemapGenerator::Sitemap.sitemapshost = "https://s3-#{ENV['AWSREGION']}.amazonaws.com/#{ENV['S3_BUCKET']}/"
-
-
-
-SitemapGenerator::Sitemap.sitemapspath = 'sitemaps/'
-SitemapGenerator::Sitemap.publicpath = 'tmp/'
+SitemapGenerator::Sitemap.public_path = 'tmp/'
+SitemapGenerator::Sitemap.sitemaps_host = "https://rft-gonsanchezs.s3.amazonaws.com/"
+SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'

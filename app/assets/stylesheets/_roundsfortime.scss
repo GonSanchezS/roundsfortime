@@ -202,8 +202,9 @@ a:hover {
 
 .index-box {
   margin-bottom: 30px;
-  padding: 30px 25px 40px 35px;
-  margin-left: 20px;
+  padding: 30px 35px 40px 35px;
+  margin-left: 25px;
+  text-align: center;
   border-radius: 3px;
 
   h4 {
@@ -267,5 +268,77 @@ a:hover {
     font-size: 0.9em;
   }
 }
+
+// Glossary
+
+.main-hero {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(hero-glossary.jpg);
+  background-size: cover;
+  h1 {
+    color: #fff;
+  }
+}
+
+.glossary-section {
+    h2 {
+    color: #fff;
+    font-size: 2.2em;
+  }
+}
+
+.glossary-questions {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(glossary-questions.jpg);
+  background-size: cover;
+}
+
+.glossary-methodologies {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(glossary-methodologies.jpg);
+  background-size: cover;
+}
+
+.glossary-workouts {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(glossary-workouts.jpg);
+  background-size: cover;
+}
+
+.glossary-movements {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(glossary-movements.jpg);
+  background-size: cover;
+}
+
+.glossary-equipment {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(glossary-equipment.jpg);
+  background-size: cover;
+}
+
+.glossary-competition {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(glossary-competition.jpg);
+  background-size: cover;
+}
+
+.glossary-others {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(glossary-others.jpg);
+  background-size: cover;
+}
+
+
+.source {
+  font-size: 0.8em;
+  text-transform: italics;
+
+  &:hover {
+    font-weight: 700;
+    cursor:pointer;
+  }
+}
+
+
+.figure-caption {
+  font-size: 0.8em;
+}
+
+
+
+
 
 
