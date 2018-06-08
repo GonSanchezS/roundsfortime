@@ -48,13 +48,38 @@
     <div class="column col-xs-12 col-6 col-mx-auto">
       <h2>Wrapping Up the Crossfit Glossary</h2>
       <p>I hope this CrossFit glossary helps you understand everything you need to know about CrossFit, even if you've never done it in your life.</p>
-    </div>
+      <h3>Looking for more?</h3>
+      <p>Check out some of the best CrossFit boxes around the world.</p>
+
+       </div>
   </div>
 </div>
 
+<div class="container section boxes dark glossary-cities">
+  <div class="columns">
 
 
+<% @cities.limit(3).each do |city|  %>
 
+<div class="column col-xs-12 col-4 col-mx-auto card-column">
+      <div class="card featured-card" id="city-card">
+            <div class="card-image">
+              <%= image_tag(city.name, alt: city.name, class: "img-responsive") %>
+            </div>
+            <div class="card-header">
+            <button class="btn tooltip tooltip-bottom float-right" data-tooltip="Average membership price" " id="box-features"><i class="em em-money_with_wings"></i> <%= city.currency %><%= city.boxes.average(:price).to_i %></button> 
+            <button class="btn tooltip tooltip-bottom float-right" data-tooltip="Number of boxes" " id="box-features"><i class="em em-classical_building"></i>  <%= city.boxes.count %></button> 
+              <h4 class="card-title"><%= link_to city.name, city_path(city) %></h4>
+              <div class="card-subtitle text-gray"><%= city.country %></div>
+            </div>
+      </div>
+    </div>
+<% end %>
+
+<div class="column col-xs-12 col-4 col-mx-auto card-column">
+</div>
+  </div>
+</div>
 
 
 

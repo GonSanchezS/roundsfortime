@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   match '(*any)', to: redirect(subdomain: ''), via: :all, constraints: {subdomain: 'www'}
   root 'static_pages#index'
   resources :boxes, only: [:index, :show]
-  resources :cities, only: [:index, :show]
+  resources :cities, only: [:index, :show, :glossary]
   get 'standards', to: 'static_pages#standards'
   get 'crossfit-glossary', to: 'static_pages#glossary'
   get 'sitemap', to: 'static_pages#sitemap'

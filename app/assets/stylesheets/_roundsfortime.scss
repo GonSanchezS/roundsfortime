@@ -129,7 +129,7 @@ a:hover {
 
 .dark {
   background-color: $dark-color;
-  h2,h4,p,li,a {color:white;}
+  h2,h3,h4,p,li,a {color:white;}
 
   a:hover {
     font-weight: 700;
@@ -337,8 +337,17 @@ a:hover {
   font-size: 0.8em;
 }
 
+.glossary-cities {
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
 
-
+.glossary-text {
+  h4 {
+    margin-top: 30px;
+  }
+  
+}
 
 
 

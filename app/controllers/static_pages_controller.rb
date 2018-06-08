@@ -3,6 +3,10 @@ class StaticPagesController < ApplicationController
     @cities = City.all
   end
 
+  def glossary
+    @cities = City.limit(3)
+  end
+
   def show
     @city = City.find(params[:id])
   end
