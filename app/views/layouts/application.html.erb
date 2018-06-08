@@ -13,18 +13,11 @@
     </script>
 
     <title>
-      <% if content_for? :page_title %>
-        <%= yield :page_title_count %> Best Crossfit Gyms in <%= yield :page_title %>
-      <% else %>
-        Rounds For Time: Find The Best Crossfit Gym Near You
-      <% end %>
+    <%= yield(:title) || "The Place to Buy Stuff" %>
     </title>
 
-    <% if content_for? :meta_description %>
-        <meta name="description" content="There are <%= yield :page_title_count %> Crossfit gyms in <%= yield :meta_description %> that meet our standards. Check them out!" />
-        <% else %>
-      <meta name="description" content="A carefully curated list of the best Crossfit box in over 50 cities across the United States and around the world." />
-    <% end %>
+    <meta name="description" content="<%= yield(:description) %>" />
+    
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=devide-width, initial-scale=1">
     <%= favicon_link_tag 'favicon.ico' %>

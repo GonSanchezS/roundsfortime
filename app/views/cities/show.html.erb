@@ -1,15 +1,6 @@
-<% content_for :page_title do
-  @city.name
-end %>
+<% content_for :title do %><%= @boxes.count %> Best CrossFit Gyms in <%= @city.name %>: Our Top Picks (Updated <%= (Time.now - 1.month).strftime("%B") %> 2018)<% end %>
 
-<% content_for :meta_description do
-  @city.name
-end %>
-
-<% content_for :page_title_count do
-  @boxes_count
-end %>
-
+<% content_for :description do %>We selected the best <%= @boxes.count %> CrossFit gyms in <%= @city.name %> based on their facilities, location, coach certifications, drop-in policy and pricing. Check them out!<% end %>
 
 <div class="container section light">
   <div class="columns">
@@ -17,7 +8,6 @@ end %>
 
 <h1 style="text-align: center;">The best Crossfit gyms in <%= @city.name %></h1>
   <p>There are <strong><%= @boxes.count %></strong> affiliated Crossfit gyms in <%= @city.name %> that meet our high standards. The average price is <%= @city.currency %><%= @boxes.average(:price).to_i %> per month for an Unlimited Membership. You can find a list of the <strong>best Crossfit gyms in <%= @city.name %></strong> below, in no particular order.</p>
-
 
 <p><a href="#better" class="vetted-note">Why are we better?</a> <i class="fas fa-arrow-down" style="font-size: 10px;"></i></p>
 
