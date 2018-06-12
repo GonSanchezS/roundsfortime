@@ -219,10 +219,6 @@ a:hover {
 
   li {
     margin-top:0.2rem;
-    color: #fff;
-    &:hover {
-      font-weight:500;
-    }
   }
 }
 }
@@ -322,6 +318,12 @@ a:hover {
 .glossary-others {
   background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(glossary-others.jpg);
   background-size: cover;
+}
+
+.accordion {
+  label {
+    color: white;
+  }
 }
 
 
