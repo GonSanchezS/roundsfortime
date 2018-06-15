@@ -128,11 +128,13 @@ a:hover {
 }
 
 .small-section {
-  padding: 27px 0 10px 0;
+  padding: 27px 0 20px 0;
 
   h1, h2, p {
-    text-align: center;
+    text-align: center !important; 
   }
+
+  p {margin-bottom:5px;}
 }
 
 .dark {
@@ -381,6 +383,14 @@ a:hover {
     margin-top: 30px;
   }
   
+}
+
+#mc_embed_signup {
+  background: #bd5656 !important;
+}
+
+#mc_embed_signup .button {
+  background-color: $dark-color !important;
 }
 
 
