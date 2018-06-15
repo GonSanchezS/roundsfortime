@@ -127,6 +127,14 @@ a:hover {
 
 }
 
+.small-section {
+  padding: 27px 0 10px 0;
+
+  h1, h2, p {
+    text-align: center;
+  }
+}
+
 .dark {
   background-color: $dark-color;
   h2,h3,h4,p,li,a {color:white;}
@@ -144,6 +152,25 @@ a:hover {
 
 .boxes {
   padding: 90px 8% 50px 8%;
+}
+
+.dark-red {
+  background-color: #bd5656;
+  h2,h3,h4,p,li,a {color:white;}
+
+  a:hover {
+    font-weight: 700;
+  }
+
+  .boxes {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    margin-bottom: -50px;
+  }
+}
+
+.boxes {
+  padding: 20px 8% 20px 8%;
 }
 
 
@@ -168,6 +195,8 @@ a:hover {
   }
   }
 }
+
+
 
 
 .wod-box {
