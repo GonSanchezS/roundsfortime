@@ -27,7 +27,7 @@
   
             </div>
             <div class="card-header">
-              <h3 class="card-title"><a href="<%= box.url %>" target="_noblank" rel="external nofollow"><%= box.name %></a></h3>
+              <h3 class="card-title"><%= link_to box.name, box_path(box) %></h3>
               <div class="card-subtitle text-gray"><%= box.address %>, <%= @city.name %></div>
             </div>
             <div class="card-body">

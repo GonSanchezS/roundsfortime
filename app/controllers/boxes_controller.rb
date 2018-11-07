@@ -8,7 +8,7 @@ class BoxesController < ApplicationController
   end
 
   def show
-    @box = Box.find(params[:id])
+    @box = Box.friendly.find(params[:id])
   end
 
 end
