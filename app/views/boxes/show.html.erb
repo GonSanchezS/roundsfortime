@@ -1,0 +1,31 @@
+<h1><%= @box.name %></h1>
+
+<div class="column col-xs-12 col-5 col-mx-auto card-column">
+      <div class="card featured-card">
+            <div class="card-image">
+              <%= image_tag(@box.name, alt: @box.name, class: "img-responsive") %>
+  
+            </div>
+            <div class="card-header">
+              <h3 class="card-title"><a href="<%= @box.url %>" target="_noblank" rel="external nofollow"><%= @box.name %></a></h3>
+              <div class="card-subtitle text-gray"><%= @box.address %>, <%= @box.city.name %></div>
+            </div>
+            <div class="card-body">
+              <%= @box.description %><% if @box.dropin? %> Drop-ins accepted.<% end %>
+            </div>
+            <div class="card-footer">
+              <% if @box.certification.empty? %><% else %><button class="btn tooltip tooltip-bottom" data-tooltip="Highest coach certification" id="box-features"><i class="em em-man-lifting-weights"></i> <%= @box.certification %></button><% end %>
+              <button class="btn tooltip tooltip-bottom" data-tooltip="Active in social media?"  id="box-features"><i class="em em-iphone"></i>     
+                <% if @box.is_social? %> 
+                  <i class="fas fa-check"></i>
+                  <% else %> 
+                  <i class="fas fa-times"></i>
+                <% end %>
+              </button>
+              <% if @box.opening != nil %><button class="btn tooltip tooltip-bottom" data-tooltip="Opening year" id="box-features"><i class="em em-calendar" style="margin-right: 4px;"></i><%= @box.opening %></button><% end %>
+              <% if @box.price != nil %><button class="btn tooltip tooltip-bottom" data-tooltip="Monthly membership" " id="box-features"><i class="em em-money_with_wings"></i> <%= @box.currency %><%= @box.price %></button><% end %>
+              <% if @box.facebook != nil %><a class="btn" id="box-social" href="<%= @box.facebook %>"><i class="fab fa-facebook-f social"></i></a><% end %>
+              <% if @box.instagram != nil %><a class="btn" id="box-social" href="<%= @box.instagram %>"><i class="fab fa-instagram"></i></a><% end %>
+            </div>
+      </div>
+    </div>

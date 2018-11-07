@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'sitemap_generator'
 gem 'fog-aws'
 gem 'figaro'
+gem 'geocoder'
 
 gem 'friendly_id', '~> 5.1.0'
 
