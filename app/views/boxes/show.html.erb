@@ -1,3 +1,39 @@
+<style>
+  #map {
+    height: 300px;
+  }
+</style>
+
+<% if @box.latitude.present? && @box.longitude.present? %>
+
+  <script>
+
+    function initMap() {
+      var myLatLng = {lat:<%= @box.latitude %>, lng: <%= @box.longitude %>};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: myLatLng
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  </script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgmzwsz6DWR_lOrzthsHkqRrSMU8-b10Y&callback=initMap">
+  </script>
+
+  <div id="map"></div>
+
+  <% end %>
+
+
+
 <h1><%= @box.name %></h1>
 
 <div class="column col-xs-12 col-5 col-mx-auto card-column">
@@ -29,3 +65,5 @@
             </div>
       </div>
     </div>
+
+    <p>CLAIM YOUR PROFILE</p>
