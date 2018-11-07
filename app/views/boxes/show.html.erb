@@ -1,6 +1,10 @@
+<% content_for :title do %>Something<% end %>
+
+<% content_for :description do %>More something<% end %>
+
 <style>
   #map {
-    height: 300px;
+    height: 250px;
   }
 </style>
 
@@ -32,24 +36,29 @@
 
   <% end %>
 
+<div class="container container-box">
+  <br />
+  <div class="columns">
 
-
-<h1><%= @box.name %></h1>
-
-<div class="column col-xs-12 col-5 col-mx-auto card-column">
-      <div class="card featured-card">
-            <div class="card-image">
-              <%= image_tag(@box.name, alt: @box.name, class: "img-responsive") %>
+    <div class="column col-xs-12 col-4 col-ml-auto">
+      <div class="card-image">
+              <%= image_tag(@box.name, alt: @box.name, class: "img-responsive img-rounded") %>
   
             </div>
-            <div class="card-header">
-              <h3 class="card-title"><a href="<%= @box.url %>" target="_noblank" rel="external nofollow"><%= @box.name %></a></h3>
-              <div class="card-subtitle text-gray"><%= @box.address %>, <%= @box.city.name %></div>
-            </div>
-            <div class="card-body">
-              <%= @box.description %><% if @box.dropin? %> Drop-ins accepted.<% end %>
-            </div>
-            <div class="card-footer">
+    </div>
+
+  <div class="column col-xs-12 col-6 col-mr-auto">
+<div class="box-description">
+<h1><%= @box.name %></h1>
+<h3>Everything you need to know about <%= @box.name %> in <%= @box.city.name %>, <%= @box.city.state %></h3>
+<p class="card-subtitle text-gray"><%= @box.address %>, <%= @box.city.name %>, <%= @box.city.state %>, <%= @box.country %></p>
+
+
+<p><%= @box.name %> is a CrossFit box located in <%= @box.city.name %>, <%= @box.city.country %>.<% if @box.price != nil %> If you are looking to start classes, you should know that <%= @box.name %> charges <%= @box.city.currency %> <%= @box.price %> for an unlimited monthly membership (the average for <%= @box.city.name %> is <%= @box.city.currency %><%= @box.city.boxes.average(:price).to_i %>.)<% end %> <% if @box.dropin? %>If you are travelling, <%= @box.name %> accepts dropins.<% end %></p>
+
+  
+
+<div class="card-footer">
               <% if @box.certification.empty? %><% else %><button class="btn tooltip tooltip-bottom" data-tooltip="Highest coach certification" id="box-features"><i class="em em-man-lifting-weights"></i> <%= @box.certification %></button><% end %>
               <button class="btn tooltip tooltip-bottom" data-tooltip="Active in social media?"  id="box-features"><i class="em em-iphone"></i>     
                 <% if @box.is_social? %> 
@@ -63,7 +72,75 @@
               <% if @box.facebook != nil %><a class="btn" id="box-social" href="<%= @box.facebook %>"><i class="fab fa-facebook-f social"></i></a><% end %>
               <% if @box.instagram != nil %><a class="btn" id="box-social" href="<%= @box.instagram %>"><i class="fab fa-instagram"></i></a><% end %>
             </div>
+
+            <br />
+
+  <p>Is this your box? Something wrong? Talk to us to claim your profile.</p>
+
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+  </div>
+
+  <div class="container section dark" id="cities">
+  <div class="columns"> 
+    <div class="column col-10 col-xs-12 col-mx-auto">
+
+      <h2>Other CrossFit gyms in <%= @box.city.name %> nearby</h2>
+      <p>If you can't find your city, don't throw a small kettlebell at us. We are working hard in-between WODs<br /> to increase our coverage.</p>
+    </div>
+  </div>
+
+
+  <div class="container section boxes">
+    <div class="columns">
+
+
+<div class="container section boxes">
+    <div class="columns">
+
+<% @boxes.limit(2).order("RANDOM()").each do |box|  %>
+
+<div class="column col-xs-12 col-5 col-mx-auto card-column">
+      <div class="card featured-card">
+            <div class="card-image">
+              <%= image_tag(box.name, alt: box.name, class: "img-responsive") %>
+  
+            </div>
+            <div class="card-header">
+              <h3 class="card-title"><%= link_to box.name, box_path(box) %></h3>
+              <div class="card-subtitle text-gray"><%= @box.address %>, <%= @box.city.name %></div>
+            </div>
+            <div class="card-body">
+              <%= box.description %><% if box.dropin? %> Drop-ins accepted.<% end %>
+            </div>
+            <div class="card-footer">
+              <% if box.certification.empty? %><% else %><button class="btn tooltip tooltip-bottom" data-tooltip="Highest coach certification" id="box-features"><i class="em em-man-lifting-weights"></i> <%= box.certification %></button><% end %>
+              <button class="btn tooltip tooltip-bottom" data-tooltip="Active in social media?"  id="box-features"><i class="em em-iphone"></i>     
+                <% if box.is_social? %> 
+                  <i class="fas fa-check"></i>
+                  <% else %> 
+                  <i class="fas fa-times"></i>
+                <% end %>
+              </button>
+              <% if box.opening != nil %><button class="btn tooltip tooltip-bottom" data-tooltip="Opening year" id="box-features"><i class="em em-calendar" style="margin-right: 4px;"></i><%= box.opening %></button><% end %>
+              <% if box.price != nil %><button class="btn tooltip tooltip-bottom" data-tooltip="Monthly membership" " id="box-features"><i class="em em-money_with_wings"></i> <%= box.currency %><%= box.price %></button><% end %>
+              <% if box.facebook != nil %><a class="btn" id="box-social" href="<%= box.facebook %>"><i class="fab fa-facebook-f social"></i></a><% end %>
+              <% if box.instagram != nil %><a class="btn" id="box-social" href="<%= box.instagram %>"><i class="fab fa-instagram"></i></a><% end %>
+            </div>
       </div>
     </div>
+<% end %>
 
-    <p>CLAIM YOUR PROFILE</p>
+
+  </div>
+</div>
+
+
+<div class="column col-xs-12 col-4 col-mx-auto card-column">
+</div>
+  </div>
+</div>
