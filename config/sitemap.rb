@@ -9,6 +9,10 @@ SitemapGenerator::Sitemap.create do
     add city_path(city), :lastmod => city.updated_at, :changefreq => 'weekly'
   end
 
+  Box.find_each do |box|
+    add box_path(box), :lastmod => box.updated_at, :changefreq => 'weekly'
+  end
+
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
