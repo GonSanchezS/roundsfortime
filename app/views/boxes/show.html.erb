@@ -1,6 +1,6 @@
-<% content_for :title do %>Something<% end %>
+<% content_for :title do %><%= @box.name %> in <%= @box.city.name %> - Rounds For Time<% end %>
 
-<% content_for :description do %>More something<% end %>
+<% content_for :description do %>Everything you need to know about <%= @box.name %>, including pricing, coach certifications, photos and dropin information.<% end %>
 
 <style>
   #map {
@@ -50,11 +50,11 @@
   <div class="column col-xs-12 col-6 col-mr-auto">
 <div class="box-description">
 <h1><%= @box.name %></h1>
-<h3>Everything you need to know about <%= @box.name %> in <%= @box.city.name %>, <%= @box.city.state %></h3>
-<p class="card-subtitle text-gray"><%= @box.address %>, <%= @box.city.name %>, <%= @box.city.state %>, <%= @box.country %></p>
-
+<h3 class="box-intro">Everything you need to know about <%= @box.name %> in <%= @box.city.name %><% if @box.city.state != nil %>, <%= @box.city.state %><%end%>.</h3>
 
 <p><%= @box.name %> is a CrossFit box located in <%= @box.city.name %>, <%= @box.city.country %>.<% if @box.price != nil %> If you are looking to start classes, you should know that <%= @box.name %> charges <%= @box.city.currency %> <%= @box.price %> for an unlimited monthly membership (the average for <%= @box.city.name %> is <%= @box.city.currency %><%= @box.city.boxes.average(:price).to_i %>.)<% end %> <% if @box.dropin? %>If you are travelling, <%= @box.name %> accepts dropins.<% end %></p>
+
+<p class="card-subtitle text-gray"><%= @box.address %>, <%= @box.city.name %><% if @box.city.state != nil %>, <%= @box.city.state %><%end%>, <%= @box.country %></p>
 
   
 
@@ -111,7 +111,7 @@
   
             </div>
             <div class="card-header">
-              <h3 class="card-title"><%= link_to box.name, box_path(box) %></h3>
+              <h3 class="card-title-box"><%= link_to box.name, box_path(box) %></h3>
               <div class="card-subtitle text-gray"><%= @box.address %>, <%= @box.city.name %></div>
             </div>
             <div class="card-body">

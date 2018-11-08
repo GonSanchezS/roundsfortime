@@ -30,7 +30,7 @@
               <h3 class="card-title"><%= link_to box.name, box_path(box) %>
 
 
-                <a href="<%= box.url %>" target="_noblank" rel="external nofollow"><%= box.name %></a></h3>
+                </h3>
               <div class="card-subtitle text-gray"><%= box.address %>, <%= @city.name %></div>
             </div>
             <div class="card-body">
@@ -61,3 +61,53 @@
 <!-- Section -->
 
 <%= render 'benefits' %>
+
+<!-- Section -->
+
+
+<div class="container section dark" id="cities">
+  <div class="columns"> 
+    <div class="column col-10 col-xs-12 col-mx-auto">
+
+      <h2>Other stuff you might be interested in</h2>
+      <p>Articles, other cities and more. We are working hard in-between WODs<br /> to increase our coverage.</p>
+    </div>
+  </div>
+
+
+  <div class="container section boxes">
+    <div class="columns">
+
+      <div class="column col-xs-12 col-4 col-mx-auto card-column">
+       
+      <div class="card featured-card" id="city-card">
+            <div class="card-image">
+              <%= image_tag("glossary-thumbnail.jpg", class: "img-responsive") %>
+            </div>
+            <div class="card-header">
+              <h4 class="card-title"><%= link_to 'Crossfit Glossary', crossfit_glossary_path %></h4>
+              <div class="card-subtitle text-gray">71 terms you should know</div>
+            </div>
+    </div>
+</div>
+
+<% @cities.limit(2).order("RANDOM()").each do |city|  %>
+<div class="column col-xs-12 col-4 col-mx-auto card-column">
+      <div class="card featured-card" id="city-card">
+            <div class="card-image">
+              <%= image_tag(city.name, alt: city.name, class: "img-responsive") %>
+            </div>
+            <div class="card-header">
+            <button class="btn tooltip tooltip-bottom float-right" data-tooltip="Average membership price" " id="box-features"><i class="em em-money_with_wings"></i> <%= city.currency %><%= city.boxes.average(:price).to_i %></button> 
+            <button class="btn tooltip tooltip-bottom float-right" data-tooltip="Number of boxes" " id="box-features"><i class="em em-classical_building"></i>  <%= city.boxes.count %></button> 
+              <h4 class="card-title"><%= link_to city.name, city_path(city) %></h4>
+              <div class="card-subtitle text-gray"><%= city.country %></div>
+            </div>
+      </div>
+    </div>
+<% end %>
+
+  </div>
+
+
+</div>
