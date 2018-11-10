@@ -100,7 +100,9 @@
             <div class="card-header">
             <button class="btn tooltip tooltip-bottom float-right" data-tooltip="Average membership price" " id="box-features"><i class="em em-money_with_wings"></i> <%= city.currency %><%= city.boxes.average(:price).to_i %></button> 
             <button class="btn tooltip tooltip-bottom float-right" data-tooltip="Number of boxes" " id="box-features"><i class="em em-classical_building"></i>  <%= city.boxes.count %></button> 
-              <h4 class="card-title"><%= link_to city.name, city_path(city) %></h4>
+                            <h4 class="card-title">
+                <%= link_to city_path(city) do %><%= city.name %><% if city.state != nil %>, <%= city.state %><%end%><% end %>
+                </h4>
               <div class="card-subtitle text-gray"><%= city.country %></div>
             </div>
       </div>
