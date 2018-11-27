@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :cities, only: [:index, :show, :glossary]
   get 'standards', to: 'static_pages#standards'
   get 'crossfit-glossary', to: 'static_pages#glossary'
-  get 'crossfit-prices', to: 'static_pages#prices'
+  get "/crossfit-prices" => redirect("https://docs.google.com/spreadsheets/d/112UFCh-atAR3rwzGCJitI6RzZ9i0LSP4iH5_sNqSmzE/edit?usp=sharing")
   get 'sitemap', to: 'static_pages#sitemap'
 end
