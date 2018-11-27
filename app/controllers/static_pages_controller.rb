@@ -7,6 +7,9 @@ class StaticPagesController < ApplicationController
     @cities = City.limit(3)
   end
 
+  def prices
+  end
+
   def show
     @city = City.find(params[:id])
   end

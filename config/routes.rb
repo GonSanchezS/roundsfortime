@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :cities, only: [:index, :show, :glossary]
   get 'standards', to: 'static_pages#standards'
   get 'crossfit-glossary', to: 'static_pages#glossary'
+  get 'crossfit-prices', to: 'static_pages#prices'
   get 'sitemap', to: 'static_pages#sitemap'
 end
