@@ -387,11 +387,27 @@ a:hover {
 }
 
 #mc_embed_signup {
-  background: #bd5656 !important;
+  background: #454d5d !important;
 }
 
 #mc_embed_signup .button {
-  background-color: $dark-color !important;
+  background-color: #e85600 !important;
+}
+
+#mc_embed_signup input.email {
+  border: none !important;
+  border-radius: 2px !important;
+  height: 50px !important;
+  padding: 17px !important;
+  width: 375px !important;
+}
+
+#mc_embed_signup .button {
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  border-radius:2px !important;
+  height: 50px !important;
 }
 
 
