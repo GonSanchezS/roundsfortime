@@ -7,3 +7,4 @@ class Box < ApplicationRecord
   after_validation :geocode
 
 end
+
