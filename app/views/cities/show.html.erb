@@ -11,11 +11,131 @@
 
 <p><a href="#better" class="vetted-note">Why are we better?</a> <i class="fas fa-arrow-down" style="font-size: 10px;"></i></p>
 
-TESTTTTT
-
     </div>
   </div>
 </div>
+
+<!-- Map -->
+
+<style>
+  #map_wrapper {
+    height: 300px;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+  <div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
+
+<script>
+  jQuery(function($) {
+    // Asynchronously Load the map API 
+    var script = document.createElement('script');
+    script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyBgmzwsz6DWR_lOrzthsHkqRrSMU8-b10Y&callback=initialize";
+    document.body.appendChild(script);
+});
+
+function initialize() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+        mapTypeId: 'roadmap'
+    };
+                    
+    // Display a map on the page
+    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    map.setTilt(45);
+        
+    // Multiple Markers
+    var markers = [
+    <% @boxes.each do |box|  %>
+      <% if box.latitude %>
+      ['<%= box.name %>', <%= box.latitude %>, <%= box.longitude %>],
+      <% end %>
+    <% end %>
+      // ['CrossFit Ireland', 53.2780014, -6.2197975], 
+      // ['CrossFit C2F', 53.2730787, -6.2139613], 
+      // ['CrossFit 536', 53.297581, -6.178500], 
+      // ['CrossFit Powerful', 53.40192125, -6.35078946821415], 
+      // ['CrossFit Green', 53.2786122, -6.2182892],
+    ];
+                        
+    // Info Window Content
+    var infoWindowContent = [
+
+
+
+ <% @boxes.each do |box|  %>
+      <% if box.latitude %>
+      ['<div class="info_content">' + '<h4><%= box.name %></h4>' + '<% if box.dropin? %><p>Drop-ins accepted.</p><% end %>' + '</div>'],
+      <% end %>
+    <% end %>
+
+      //  ['<div class="info_content">' +
+      //  '<h4>Crossfit Ireland</h4>'
+      //  + '<p>Drop-ins acceped</p>' +
+      //  '</div>'],
+       // ['<div class="info_content">' +
+        // '<h4>CrossFit C2F</h4>' +
+       // '</div>'],
+       // ['<div class="info_content">' +
+       // '<h4>CrossFit 536</h4>' +
+       // '</div>'],
+        //['<div class="info_content">' +
+        //'<h4>CrossFit Powerful</h4>' +
+        //'</div>'],
+        //['<div class="info_content">' +
+        //'<h4>CrossFit Green</h4>' +
+        //'</div>'],
+
+    ];
+        
+    // Display multiple markers on a map
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+    
+    // Loop through our array of markers & place each one on the map  
+    for( i = 0; i < markers.length; i++ ) {
+        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[i][0]
+        });
+        
+        // Allow each marker to have an info window    
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[i][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
+
+        // Automatically center the map fitting all markers on the screen
+        map.fitBounds(bounds);
+    }
+
+    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        this.setZoom(10);
+        google.maps.event.removeListener(boundsListener);
+    });
+    
+}
+
+</script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgmzwsz6DWR_lOrzthsHkqRrSMU8-b10Y&callback=initMap">
+  </script>
+
+
+<!-- Map -->
 
 <div class="container section boxes">
     <div class="columns">
