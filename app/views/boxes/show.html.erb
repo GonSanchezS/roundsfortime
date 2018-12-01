@@ -53,7 +53,7 @@
 <%= @box.id %>
 <h3 class="box-intro">Everything you need to know about <%= @box.name %> in <%= @box.city.name %><% if @box.city.state != nil %>, <%= @box.city.state %><%end%>.</h3>
 
-<p><%= @box.name %> is a CrossFit box located in <%= @box.city.name %>, <%= @box.city.country %>.<% if @box.price != nil %> If you are looking to start classes, you should know that <%= @box.name %> charges <%= @box.city.currency %> <%= @box.price %> for an unlimited monthly membership (the average for <%= @box.city.name %> is <%= @box.city.currency %><%= @box.city.boxes.average(:price).to_i %>.)<% end %> <% if @box.dropin? %>If you are travelling, <%= @box.name %> accepts dropins.<% end %></p>
+<p><%= @box.name %> is a CrossFit box located in <%= @box.city.name %>, <%= @box.city.country %>.<% if @box.price != nil %> If you are looking to start, you should know that <%= @box.name %> charges <%= @box.city.currency %> <%= @box.price %> for an unlimited monthly membership (the average for <%= @box.city.name %> is <%= @box.city.currency %><%= @box.city.boxes.average(:price).to_i %>.)<% end %> <% if @box.dropin? %>If you are travelling, <%= @box.name %> accepts dropins.<% end %></p>
 
 <p class="card-subtitle text-gray"><%= @box.address %>, <%= @box.city.name %><% if @box.city.state != nil %>, <%= @box.city.state %><%end%>, <%= @box.country %></p>
 
