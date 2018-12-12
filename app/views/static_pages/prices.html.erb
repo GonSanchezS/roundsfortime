@@ -2,22 +2,322 @@
 
 <% content_for :description do %>This comprehensive study shows CrossFit box prices around the United States and the World.<% end %>
 
-<div class="container section light main-hero">
+<div class="container section dark main-hero">
   <div class="columns">
     <div class="column col-xs-12 col-8 col-mx-auto">
-<h1 style="text-align: center;">CrossFit Prices Around the US & The World</h1>
-<p>Find how much you are paying in <%= request.location.city %></p>
+<h1 style="text-align: center;">CrossFit Membership Prices<br /> Around the US & The World</h1>
+<p>Updated <%= (Time.now - 1.month).strftime("%B") %> 2018</p>
     </div>
   </div>
 </div>
 
 <div class="container section text">
   <div class="columns">
-    <div class="column col-xs-12 col-8 col-mx-auto">
-      <p>We are running a study on CrossFit prices around the world. Help us out.</p>
+    <div class="column col-xs-12 col-3 col-ml-auto">
+      <p>Interested in knowing how much you should pay for CrossFit?</p>
+      <p>We've looked at CrossFit membership prices around the United States and the world and after collecting over 1,400 data points, we've come up with some interesting discoveries.</p>
+      <p>What's the most expensive country? Is NYC the most expensive state? Where on Earth is the cheapest box?</p>
+      <p>All and more in here.</p>
+    </div>
+    <div class="column col-xs-12 col-3 col-mr-auto">
+        <div class="index-box light">
+          <h4>Table of Contents</h4>
+          <ul>
+            <li><a href="#index">Index</a></li>
+            <li><a href="#general">Countries</a></li>
+            <li><a href="#movements">US States</a></li>
+            <li><a href="#methodologies">Types of Memberships</a></li>
+            <li><a href="#workouts">Most expensive gyms</a></li>
+            <li><a href="#others">Others stuff</a></li>
+            <li><a href="#others">Raw data</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
 
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDJ7a3xntPZlmHZDUXRDrOrh7Cn96OimEedcG8Kt8l8hXGKaE6ZR8buSF5HnAr8BJfxzVtpI1Ripw5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<div class="container section light text">
+  <div class="columns">
+    <div class="column col-xs-12 col-6 col-mx-auto">
+
+
+<h2>CrossFit Membership Prices Around The World</h2>
+<p>Below you can find a list of the average price for a unlimited CrossFit membership around the world. The most expensive countries are:</p>
+<ul>
+  <li>Hong Kong, with an average monthly price of $315.63</li>
+  <li>Hong Kong, with an average monthly price of $315.63</li>
+  <li>Hong Kong, with an average monthly price of $315.63</li>
+</ul>
+<p>The United States is ranked number 11, after countries like Japan, Australia and the United Kingdom.</p>
+      <table class="table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Country</th>
+      <th>Average Membership Price</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td>1</td><td>Hong Kong</td><td>$315.63</td></tr>
+<tr><td>2</td><td>Korea</td><td>$250.00</td></tr>
+<tr><td>3</td><td>Cayman Islands</td><td>$240.00</td></tr>
+<tr><td>4</td><td>Japan</td><td>$226.75</td></tr>
+<tr><td>5</td><td>Jordan</td><td>$190.00</td></tr>
+<tr><td>6</td><td>United Kingdom</td><td>$181.66</td></tr>
+<tr><td>7</td><td>Singapore</td><td>$173.50</td></tr>
+<tr><td>8</td><td>Australia</td><td>$165.82</td></tr>
+<tr><td>9</td><td>Taiwan</td><td>$160.00</td></tr>
+<tr class="active"><td>10</td><td>United States</td><td>$155.98</td></tr>
+</tbody>
+</table>
+
+//map
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Country</th>
+      <th>Average Membership Price</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td>11</td><td>Ireland</td><td>$155.08</td></tr>
+<tr><td>12</td><td>New Zealand</td><td>$151.99</td></tr>
+<tr><td>13</td><td>Switzerland</td><td>$143.00</td></tr>
+<tr><td>14</td><td>Germany</td><td>$136.62</td></tr>
+<tr><td>15</td><td>France</td><td>$125.81</td></tr>
+<tr><td>16</td><td>Panama</td><td>$125.00</td></tr>
+<tr><td>17</td><td>Canada</td><td>$124.80</td></tr>
+<tr><td>18</td><td>Norway</td><td>$124.44</td></tr>
+<tr><td>19</td><td>Sweden</td><td>$124.25</td></tr>
+<tr><td>20</td><td>Spain</td><td>$113.17</td></tr>
+<tr><td>21</td><td>Finland</td><td>$108.03</td></tr>
+<tr><td>22</td><td>Netherlands</td><td>$107.00</td></tr>
+<tr><td>23</td><td>Reunion Island</td><td>$106.22</td></tr>
+<tr><td>24</td><td>Aruba</td><td>$106.00</td></tr>
+<tr><td>25</td><td>Malaysia</td><td>$105.00</td></tr>
+<tr><td>26</td><td>Czech Republic</td><td>$96.00</td></tr>
+<tr><td>27</td><td>Suriname</td><td>$90.00</td></tr>
+<tr><td>28</td><td>Vietnam</td><td>$90.00</td></tr>
+<tr><td>29</td><td>Scotland</td><td>$89.20</td></tr>
+<tr><td>30</td><td>Portugal</td><td>$84.98</td></tr>
+<tr><td>31</td><td>Mexico</td><td>$83.00</td></tr>
+<tr><td>32</td><td>Costa Rica</td><td>$80.00</td></tr>
+<tr><td>33</td><td>Jamaica</td><td>$80.00</td></tr>
+<tr><td>34</td><td>Namibia</td><td>$76.00</td></tr>
+<tr><td>35</td><td>South Africa</td><td>$72.93</td></tr>
+<tr><td>36</td><td>Wales</td><td>$72.31</td></tr>
+<tr><td>37</td><td>Denmark</td><td>$64.87</td></tr>
+<tr><td>38</td><td>Uruguay</td><td>$62.00</td></tr>
+<tr><td>39</td><td>Romania</td><td>$53.45</td></tr>
+<tr><td>40</td><td>Mongolia</td><td>$53.00</td></tr>
+<tr><td>41</td><td>El Salvador</td><td>$50.00</td></tr>
+<tr><td>42</td><td>Serbia</td><td>$50.00</td></tr>
+<tr><td>43</td><td>Argentina</td><td>$34.26</td></tr>
+<tr><td>44</td><td>Brazil</td><td>$33.32</td></tr>
+  </tbody>
+</table>
+
 
     </div>
   </div>
+</div>
+
+
+<div class="container section text">
+  <div class="columns">
+    <div class="column col-xs-12 col-6 col-mx-auto">
+
+<h2>CrossFit Membership Prices Around The United States</h2>
+<p>Below you can find a list of the average price for a unlimited CrossFit membership around the world. The most expensive countries are:</p>
+<ul>
+  <li>Hong Kong, with an average monthly price of $315.63</li>
+  <li>Hong Kong, with an average monthly price of $315.63</li>
+  <li>Hong Kong, with an average monthly price of $315.63</li>
+</ul>
+<p>The United States is ranked number 11, after countries like Japan, Australia and the United Kingdom.</p>
+<p></p>
+
+
+     <table class="table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>State Code</th>
+      <th>State</th>
+      <th>Average Membership Price</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td>1</td><td>AK</td><td>$165.00</td></tr>
+<tr><td>2</td><td>AL</td><td>$141.64</td></tr>
+<tr><td>3</td><td>AR</td><td>$97.50</td></tr>
+<tr><td>4</td><td>AZ</td><td>$145.14</td></tr>
+<tr><td>5</td><td>CA</td><td>$179.81</td></tr>
+<tr><td>6</td><td>CO</td><td>$151.29</td></tr>
+<tr><td>7</td><td>CT</td><td>$171.82</td></tr>
+<tr><td>8</td><td>DC</td><td>$260.00</td></tr>
+<tr><td>9</td><td>DE</td><td>$166.67</td></tr>
+<tr><td>10</td><td>FL</td><td>$149.54</td></tr>
+<tr><td>11</td><td>GA</td><td>$140.26</td></tr>
+</tbody>
+</table>
+
+<div class="chart">
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1cap9U8XcRwxQbdoilQYFdB_K1bNHIZwvTrPFfC_6fTIU6bcdiTd4657ls0zWPpbuHUUODO3J8HGc/pubchart?oid=2034141791&amp;format=interactive"></iframe>
+</div> 
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>State Code</th>
+      <th>State</th>
+      <th>Average Membership Price</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td>12</td><td>HI</td><td>$180.29</td></tr>
+<tr><td>13</td><td>IA</td><td>$116.17</td></tr>
+<tr><td>14</td><td>ID</td><td>$123.17</td></tr>
+<tr><td>15</td><td>IL</td><td>$156.04</td></tr>
+<tr><td>16</td><td>IN</td><td>$134.33</td></tr>
+<tr><td>17</td><td>IW</td><td>$100.00</td></tr>
+<tr><td>18</td><td>KS</td><td>$122.20</td></tr>
+<tr><td>19</td><td>KY</td><td>$124.80</td></tr>
+<tr><td>20</td><td>LA</td><td>$123.00</td></tr>
+<tr><td>21</td><td>MA</td><td>$172.07</td></tr>
+<tr><td>22</td><td>MD</td><td>$159.81</td></tr>
+<tr><td>23</td><td>ME</td><td>$113.75</td></tr>
+<tr><td>24</td><td>MI</td><td>$129.77</td></tr>
+<tr><td>25</td><td>MN</td><td>$170.41</td></tr>
+<tr><td>26</td><td>MO</td><td>$161.44</td></tr>
+<tr><td>27</td><td>MS</td><td>$103.75</td></tr>
+<tr><td>28</td><td>MT</td><td>$108.75</td></tr>
+<tr><td>29</td><td>NC</td><td>$155.06</td></tr>
+<tr><td>30</td><td>ND</td><td>$142.50</td></tr>
+<tr><td>31</td><td>NE</td><td>$138.33</td></tr>
+<tr><td>32</td><td>NH</td><td>$170.00</td></tr>
+<tr><td>33</td><td>NJ</td><td>$174.39</td></tr>
+<tr><td>34</td><td>NM</td><td>$125.00</td></tr>
+<tr><td>35</td><td>NV</td><td>$161.19</td></tr>
+<tr><td>36</td><td>NY</td><td>$203.77</td></tr>
+<tr><td>37</td><td>OH</td><td>$128.22</td></tr>
+<tr><td>38</td><td>OK</td><td>$126.67</td></tr>
+<tr><td>39</td><td>OR</td><td>$151.05</td></tr>
+<tr><td>40</td><td>PA</td><td>$148.43</td></tr>
+<tr><td>41</td><td>PN</td><td>$150.00</td></tr>
+<tr><td>42</td><td>RI</td><td>$183.50</td></tr>
+<tr><td>43</td><td>SC</td><td>$140.62</td></tr>
+<tr><td>44</td><td>TN</td><td>$150.70</td></tr>
+<tr><td>45</td><td>TX</td><td>$164.87</td></tr>
+<tr><td>46</td><td>UT</td><td>$136.15</td></tr>
+<tr><td>47</td><td>VA</td><td>$155.58</td></tr>
+<tr><td>48</td><td>VI</td><td>$190.00</td></tr>
+<tr><td>49</td><td>VT</td><td>$175.00</td></tr>
+<tr><td>50</td><td>WA</td><td>$181.74</td></tr>
+<tr><td>51</td><td>WI</td><td>$130.59</td></tr>
+<tr><td>52</td><td>WV</td><td>$116.25</td></tr>
+<tr><td>53</td><td>WY</td><td>$150.00</td></tr>
+  </tbody>
+</table>
+
+</div></div></div>
+
+<div class="container section light text">
+  <div class="columns">
+    <div class="column col-xs-12 col-6 col-mx-auto">
+
+<h2>Price variations across Membership Types</h2>
+<p>We commontly see different types of memberships:</p>
+<ul>
+  <li>Unlimited</li>
+  <li>3 days per week</li>
+  <li>4 days per week</li>
+  <li>5 days per week</li>
+  <li>Families and couples</li>
+  <li>Others (Open Gym, Weightlifting, etc.)</li>
+</ul>
+<p>Here's a chart outlining the price variation across Membership types:</p>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Membership type</th>
+      <th>Average price</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td>2 days/week</td><td>$66.51</td></tr>
+<tr><td>3 days/week</td><td>$114.03</td></tr>
+<tr><td>4 days/week</td><td>$133.52</td></tr>
+<tr><td>5 days/week</td><td>$80.03</td></tr>
+<tr><td>Open Gym</td><td>$59.75</td></tr>
+<tr><td>Unlimited</td><td>$136.42</td></tr>
+<tr><td>Unlimited Couple</td><td>$194.89</td></tr>
+<tr><td>Unlimited Family</td><td>$222.50</td></tr>
+<tr><td>Weightlifting</td><td>$115.00</td></tr>
+ </tbody>
+</table>
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1cap9U8XcRwxQbdoilQYFdB_K1bNHIZwvTrPFfC_6fTIU6bcdiTd4657ls0zWPpbuHUUODO3J8HGc/pubchart?oid=1358481075&amp;format=interactive"></iframe>
+
+
+
+</div></div></div>
+
+<!-- end -->
+
+<div class="container section dark" id="cities">
+  <div class="columns"> 
+    <div class="column col-10 col-xs-12 col-mx-auto">
+
+      <h2>Other stuff you might be interested in</h2>
+      <p>Articles, other cities and more. We are working hard in-between WODs<br /> to increase our coverage.</p>
+    </div>
+  </div>
+
+
+  <div class="container section boxes">
+    <div class="columns">
+
+      <div class="column col-xs-12 col-4 col-mx-auto card-column">
+       
+      <div class="card featured-card" id="city-card">
+            <div class="card-image">
+              <%= image_tag("glossary-thumbnail.jpg", class: "img-responsive") %>
+            </div>
+            <div class="card-header">
+              <h4 class="card-title"><%= link_to 'Crossfit Glossary', crossfit_glossary_path %></h4>
+              <div class="card-subtitle text-gray">71 terms you should know</div>
+            </div>
+    </div>
+</div>
+
+<% @cities.limit(2).order("RANDOM()").each do |city|  %>
+<div class="column col-xs-12 col-4 col-mx-auto card-column">
+      <div class="card featured-card" id="city-card">
+            <div class="card-image">
+              <%= image_tag(city.name, alt: city.name, class: "img-responsive") %>
+            </div>
+            <div class="card-header">
+            <button class="btn tooltip tooltip-bottom float-right" data-tooltip="Average membership price" " id="box-features"><i class="em em-money_with_wings"></i> <%= city.currency %><%= city.boxes.average(:price).to_i %></button> 
+            <button class="btn tooltip tooltip-bottom float-right" data-tooltip="Number of boxes" " id="box-features"><i class="em em-classical_building"></i>  <%= city.boxes.count %></button> 
+                            <h4 class="card-title">
+                <%= link_to city_path(city) do %><%= city.name %><% if city.state != nil %>, <%= city.state %><%end%><% end %>
+                </h4>
+              <div class="card-subtitle text-gray"><%= city.country %></div>
+            </div>
+      </div>
+    </div>
+<% end %>
+
+  </div>
+
+
+</div>
 </div>

@@ -8,6 +8,7 @@ class StaticPagesController < ApplicationController
   end
 
   def prices
+    @cities = City.all
   end
 
   def show
