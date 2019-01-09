@@ -310,6 +310,15 @@ a:hover {
   }
 }
 
+.prices-hero {
+  background: linear-gradient(rgba(80,89,108,0.5), rgba(80,89,108,0.5)), url(hero-prices.jpg);
+  background-size: cover;
+  h1 {
+    color: #fff;
+  }
+}
+
+
 .glossary-section {
     h2 {
     color: #fff;
