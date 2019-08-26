@@ -1,13 +1,13 @@
 <% content_for :title do %><%= @boxes.count %> Best CrossFit Gyms in <%= @city.name %><% if @city.state != nil %>, <%= @city.state %><%end%>: Our Top Picks (Updated <%= (Time.now - 1.month).strftime("%B") %> 2018)<% end %>
 
-<% content_for :description do %>We selected the best <%= @boxes.count %> CrossFit gyms in <%= @city.name %> based on their facilities, location, coach certifications, drop-in policy and pricing. Check them out!<% end %>
+<% content_for :description do %>We selected the best <%= @boxes.count %> strength-and-conditioning, cross-training and CrossFit® gyms in <%= @city.name %> based on their facilities, location, coach certifications, drop-in policy and pricing. Check them out!<% end %>
 
 <div class="container section light">
   <div class="columns">
     <div class="column col-xs-12 col-8 col-mx-auto">
 
-<h1 style="text-align: center;">The best Crossfit gyms in <%= @city.name %><% if @city.state != nil %>, <%= @city.state %><% end %></h1>
-  <p>There are <strong><%= @boxes.count %></strong> affiliated Crossfit gyms in <%= @city.name %> that meet our high standards. The average price is <%= @city.currency %><%= @boxes.average(:price).to_i %> per month for an Unlimited Membership. You can find a list of the <strong>best Crossfit gyms in <%= @city.name %></strong> below, in no particular order.</p>
+<h1 style="text-align: center;">The best CrossFit® gyms in <%= @city.name %><% if @city.state != nil %>, <%= @city.state %><% end %></h1>
+  <p>There are <strong><%= @boxes.count %></strong> affiliated Crossfit gyms in <%= @city.name %> that meet our high standards. The average price is <%= @city.currency %><%= @boxes.average(:price).to_i %> per month for an Unlimited Membership. You can find a list of the <strong>best CrossFit® gyms in <%= @city.name %></strong> below, in no particular order.</p>
 
 <p><a href="#better" class="vetted-note">Why are we better?</a> <i class="fas fa-arrow-down" style="font-size: 10px;"></i></p>
 
